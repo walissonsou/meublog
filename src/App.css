@@ -8,7 +8,8 @@
   --gray-800: #202024;
   --gray-900: #121214;
 
-  --green-500: #199fff;
+  --blue-500:rgb(0, 86, 109);
+  
 }
 
 
@@ -17,8 +18,8 @@
 }
 body {
   background-color: var(--gray-100);
-  padding: 0;
-  margin: 0;
+  padding: 2rem;
+  margin: 2px 1em 0 auto;
   box-sizing: border-box;
   font-family:'Dosis', sans-serif;
 }
