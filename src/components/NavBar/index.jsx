@@ -1,7 +1,7 @@
 import logo from '../../assets/logo.png';
 import styles from './NavBar.module.css';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
 
@@ -26,10 +26,10 @@ return (
      </button>
 
      <ul className={isMobile ? styles.navlist : styles.navlistactive}>   
-        <li><a href="/posts"> POSTS </a> </li>
-        <li><a href="/contato"> CONTATO </a></li>
-        <li><a href="/culture"> CULTURA </a> </li>
-        <li><a href="/about"> SOBRE </a></li>
+        <li><Link className={styles.a} to="/posts"> POSTS </Link> </li>
+        <li><Link className={styles.a} to="/contato"> CONTATO </Link></li>
+        <li><Link className={styles.a} to="/culture"> CULTURA </Link> </li>
+        <li><Link className={styles.a} to="/about"> SOBRE </Link></li>
       </ul>
     </nav>
 
