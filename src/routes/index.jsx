@@ -5,17 +5,22 @@ import {
 } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import NavBar from '../components/NavBar'
+import About from '../pages/About'
+import Books from '../pages/Books'
+import Footer from '../components/Footer'
 export default function AplicationRoutes() {
   return (
     <BrowserRouter>
       <NavBar />
       <Routes>
       <Route path="/" element={<Home/>}/>   
-      <Route path="/posts" element={<h1>posts</h1>}/>  
+      <Route path="/" element={<h1>HOME</h1>}/>  
       <Route path="/contato" element={<h1>contato</h1>}/> 
-      <Route path="/culture" element={<h1>culture</h1>}/> 
-      <Route path="/about" element={<h1>about</h1>}/>       
+      <Route path="/livros" element={<Books/>}/> 
+      <Route path="/sobre" element={<About />}/>    
+        
       </Routes>
+      <Footer /> 
     </BrowserRouter>
   );
 }
