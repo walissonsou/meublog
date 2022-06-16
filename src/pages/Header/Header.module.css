@@ -1,5 +1,5 @@
 .homeheader{
-  background: red;
+  background: var(--gray-300);
   padding: 25px 20px;
   margin-top: 4rem;
   font-family:'Dosis', sans-serif;

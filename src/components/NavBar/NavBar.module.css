@@ -84,7 +84,7 @@ nav{
     width: 50vw;    
     height: 92vh;
    
-    background-color: var(--gray-300);       
+    background-color: transparent;       
    
 }
 .navlistactive li {
@@ -97,6 +97,6 @@ nav{
 }
 .button{
   background-color: transparent;
-  color: red;
-  border: red;
+  color: var(--gray-300);
+  border: var(--gray-300);;
 }
