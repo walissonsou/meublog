@@ -47,3 +47,10 @@
   background: var( --blue-400);
   cursor: pointer;
 }
+@media (max-width: 630px) {
+  .headercontent {
+    flex-direction: column;
+    text-align: center;
+
+  }
+}

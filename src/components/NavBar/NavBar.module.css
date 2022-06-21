@@ -10,6 +10,7 @@ header .navbar{
   justify-content: center;
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 
@@ -20,6 +21,15 @@ header .avatar {
   max-width: 3.1rem;
   max-height: 3.1rem;
   
+}
+nav{
+  display: flex;
+  justify-content: flex-start;
+  margin:0;
+  margin-right: 3rem;
+}
+.linkdafoto{
+  margin-left: 1rem;
 }
 span .span{
   margin: 0;
@@ -35,12 +45,8 @@ span .span{
   list-style: none;
   display: flex;    
 }
-.navlist li {
-  flex-direction: row;
-  letter-spacing: 2px;
- 
-  list-style: none;
-} 
+
+
 .navlist .a:hover{
   color:var(--blue-600);
 }
@@ -49,5 +55,5 @@ span .span{
   height: 1rem;
 }
 .navlist li+li{
-  margin-left: 4rem;
+  margin-left: 1rem;
 }
