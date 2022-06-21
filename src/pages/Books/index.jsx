@@ -30,68 +30,68 @@ export const Books = () => {
           </Link>
         </li>
         <li>
-          <Link to="#">
-            <div>
+          <Link to="#" className={styles.link}>
+            <div className={styles.contentitem}>
               <span>
                 <span></span>
-                <img src={book} alt="livro"></img>
+                <img src={book} alt="livro" className={styles.image}></img>
               </span>
             </div>
             <strong>Michelle Obama</strong>
             <p>Michelle Obama </p>
-            <div></div>
+            <div className={styles.rating}></div>
           </Link>
         </li>
         <li>
-          <Link to="#">
-            <div>
+          <Link to="#" className={styles.link}>
+            <div className={styles.contentitem}>
               <span>
                 <span></span>
-                <img src={book} alt="livro"></img>
+                <img src={book} alt="livro" className={styles.image}></img>
               </span>
             </div>
             <strong>Michelle Obama</strong>
             <p>Michelle Obama </p>
-            <div></div>
+            <div className={styles.rating}></div>
           </Link>
         </li>
         <li>
-          <Link to="#">
-            <div>
+          <Link to="#" className={styles.link}>
+            <div className={styles.contentitem}>
               <span>
                 <span></span>
-                <img src={book} alt="livro"></img>
+                <img src={book} alt="livro" className={styles.image}></img>
               </span>
             </div>
             <strong>Michelle Obama</strong>
             <p>Michelle Obama </p>
-            <div></div>
+            <div className={styles.rating}></div>
           </Link>
         </li>
         <li>
-          <Link to="#">
-            <div>
+          <Link to="#" className={styles.link}>
+            <div className={styles.contentitem}>
               <span>
                 <span></span>
-                <img src={book} alt="livro"></img>
+                <img src={book} alt="livro" className={styles.image}></img>
               </span>
             </div>
             <strong>Michelle Obama</strong>
             <p>Michelle Obama </p>
-            <div></div>
+            <div className={styles.rating}></div>
           </Link>
         </li>
         <li>
-          <Link to="#">
-            <div>
+          <Link to="#" className={styles.link}>
+            <div className={styles.contentitem}>
               <span>
                 <span></span>
-                <img src={book} alt="livro"></img>
+                <img src={book} alt="livro" className={styles.image}></img>
               </span>
             </div>
             <strong>Michelle Obama</strong>
             <p>Michelle Obama </p>
-            <div></div>
+            <div className={styles.rating}></div>
           </Link>
         </li>
       </ul>
