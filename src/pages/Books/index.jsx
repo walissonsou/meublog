@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Books.module.css";
-import book from "../../assets/avatar.png";
+import book from "../../assets/book.jpg";
 import { Link } from "react-router-dom";
 
 export const Books = () => {
