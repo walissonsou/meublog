@@ -22,7 +22,9 @@ export default function About() {
     Nas horas vagas adoro estar ao ar livre, ler livros, treinar 🏋🏽, surfar 🏄 e viajar ✈️.
     </p>
     </p>
-    <button className={styles.buttons}> Contact me </button>
+    <a className={styles.myemail} href="mailto:walissonsouza96@hotmail.com">
+    <button className={styles.buttons}>Contate me</button>
+    </a>
     </div>
   )
 }
