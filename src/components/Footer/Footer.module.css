@@ -1,60 +1,122 @@
-.FooterContainer {
-  width: 90%;
+footer{
+  margin-top: 10rem;
+  width: 100%;
   max-width: 980px;
-  margin-bottom: 2rem;
-  background-color: var(--gray-100);
+  position: relative;
+  background:#3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.FooterWrap{
-padding: 48px 24px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-max-width: 100%;
+footer .socialicon,
+footer .menu{
+  margin-left: 1rem;
+  justify-content: center;
+   align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0; 
+  
 }
-.FooterLinksContainer{
-display: flex;
-justify-content: center;
+ .FooterContainer .socialicon li,
+ footer .menu li
+ {
+  list-style: none;  
 }
-.FooterLinksWrapper{ 
-display: flex;
-}
-.FooterLinkItems{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: 16px;
-text-align: center;
-width: 160px;
-box-sizing: border-box;
-color: #ffff;
-
-
-
-}
-.FooterLinkTitle{
-font-size: 14px;
-margin-bottom: 16px;
-}
-.FooterLink{ 
-  color: var(--gray-400);
-  font-weight:100;
-text-decoration: none;
-margin-bottom: 0.5rem;
-font-size: 14px;
-}
-.FooterLink:hover{
-  color: #01b;
-  transition: 0.3 ease-out;
-
-}
-.copyrightp{
-  text-align: center;
+.FooterContainer .socialicon li a
+ {
   justify-content: center;
   display: flex;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+  display: inline-block;
+  transition: 0.5s;
 }
-hr{
-  margin-top: 2rem;
+.FooterContainer .socialicon li a:hover{
+  transform: translate(-.5rem);
+}
+footer .menu li a {
+  justify-content: center;
+  display: flex;
+  font-size: 1.2rem;
+  color: black;
+  margin: 0 1rem;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+
+}
+.FooterContainer p {
+  justify-content: center;
+  display: flex;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: .8rem;
+  font-size: 1.1rem;
+}
+.FooterContainer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
   max-width: 980px;
+  height:100px;
+  background: url(../../assets//wave.png);
+  background-size: 1000px 100px;
+
+  
+}
+.FooterContainer .wave#wave1{
+  z-index:1000;
+  opacity:1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+.FooterContainer .wave#wave2{
+  z-index:999;
+  opacity:0.5;
+  bottom: .8rem;
+  animation: animateWave_02 4s linear infinite;
+}
+
+.FooterContainer .wave#wave3{
+  z-index:1000;
+  opacity:0.2;
+  bottom: 1rem;
+  animation: animateWave 4s linear infinite;
+}
+.FooterContainer .wave#wave4{
+  z-index:999;
+  opacity:0.7;
+  bottom: 1.1rem;
+  animation: animateWave_02 4s linear infinite;
+}
+@keyframes animateWave {
+  0%{
+    background-position-x: 1000px;
+  }
+  100%{
+    background-position-x: 0px;
+  }
+ 
+}
+@keyframes animateWave_02 {
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+ 
 }

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default function NavBar() {
 return (
     <header className={styles.navbar}> 
+    <div className={styles.container}>
       <Link to="/" className={styles.linkdafoto} >
        <span className={styles.span}>
         <img src={avatar} className={styles.avatar} alt="logo" /> 
@@ -18,12 +19,6 @@ return (
           <li><Link className={styles.a} to="/livros"> Livros </Link></li>
         </ol>
       </nav>
-      <div>
-        <div className={styles.buttonlight}>
-          <button>
-
-          </button>
-        </div>
       </div>
     </header>
 

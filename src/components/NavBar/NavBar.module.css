@@ -12,7 +12,12 @@ header .navbar{
   align-items: center;
   text-align: center;
 }
-
+header .container{
+  display: flex;
+ 
+  align-items: center;
+  justify-content: space-around;
+}
 
 header .avatar {
   min-width: 3.1rem;
@@ -22,24 +27,26 @@ header .avatar {
   max-height: 3.1rem;
   
 }
-nav{
+nav .navlist{
+  margin-left: 4rem;
+  padding: 0;
   display: flex;
   justify-content: flex-start;
   margin:0;
   margin-right: 3rem;
 }
-.linkdafoto{
-  margin-left: 1rem;
-}
+
 span .span{
-  margin: 0;
+  border: 0px;
+   margin: 0px;
+    padding: 0px;
   box-sizing:border-box;
   display: flex;
   overflow:hidden; 
   background:none;
   opacity:1; 
   position:relative;
-  padding: 0;
+  
 }
 .navlist ol{ 
   list-style: none;

@@ -14,6 +14,7 @@
   
 }
 *{
+  padding: 0;
   margin:0 auto;
   box-sizing: border-box;
   width: 100%;  
@@ -32,14 +33,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
-  height: 100vh;  
+  /* height: 100vh;   */
   width: 100%;
   max-width: 980px;
   box-sizing: border-box;
-  margin-top: 0;
-}
-
-
-@media (max-width:768px){
-  
+ 
 }

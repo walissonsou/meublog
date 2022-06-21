@@ -1,34 +1,30 @@
-
-import { Link } from 'react-router-dom'
 import styles from './Footer.module.css';
+
 const Footer = () => {
   return (
     <footer className={styles.FooterContainer}>
-    <hr />
-      <div className={styles.FooterWrap}>
-        <div className={styles.FooterLinksContainer}>
-          <div className={styles.FooterLinksWrapper}>
-            <div className={styles.FooterLinkItems}>
-              
-             
-                <Link  className={styles.FooterLinkItems} to="#"> Home </Link>
-                <Link  className={styles.FooterLinkItems} to="#"> Sobre </Link>
-                <Link  className={styles.FooterLinkItems} to="#"> Blog </Link>
-                <Link  className={styles.FooterLinkItems} to="#"> Livro </Link>
-             </div>
-             <div  className={styles.FooterLinkItems}>
-            
-                <Link   className={styles.FooterLinkItems} to="#"> Facebook </Link>
-                <Link  className={styles.FooterLinkItems} to="#"> Twitter  </Link>
-                <Link  className={styles.FooterLinkItems} to="#"> GitHub </Link>
-                <Link  className={styles.FooterLinkItems} to="#"> Linkedin </Link>
-                
-             </div>
-            
-          </div>
-        </div>
-      </div>
-      <p className={styles.copyrightp}> © Walisson Souza 2022 </p>
+
+    <div className={styles.waves}>
+      <div className={styles.wave} id={styles.wave1}> </div>
+      <div className={styles.wave} id={styles.wave2}> </div>
+      <div className={styles.wave} id={styles.wave3}> </div>
+      <div className={styles.wave} id={styles.wave4}> </div>          
+    </div>
+      <ol className={styles.socialicon}>
+      
+        <li><a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a></li>
+        <li><a href="#"> <ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="#"> <ion-icon name="logo-instagram"></ion-icon> </a></li>
+        <li><a href="#"> <ion-icon name="logo-linkedin"></ion-icon> </a></li>
+        
+      </ol>
+      <ol className={styles.menu}>
+        <li><a href="#"> Início </a></li>
+        <li><a href="http://localhost:3000/sobre"> Sobre </a></li>
+        <li><a href="#"> Blog </a></li>
+        <li><a href="#"> Livros</a></li>
+      </ol>
+      <p> © Walisson Souza 2022</p>
     </footer>
   )
 }

@@ -1,5 +1,6 @@
 import styles from './About.module.css'
 import euwal from '../../assets/euwal.png'
+
 export default function About() {
   return (
     <div className={styles.aboutcontainer}>
