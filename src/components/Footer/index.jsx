@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.FooterContainer}>
-    <hr/>
+    <hr />
       <div className={styles.FooterWrap}>
         <div className={styles.FooterLinksContainer}>
           <div className={styles.FooterLinksWrapper}>

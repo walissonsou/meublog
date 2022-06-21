@@ -1,8 +1,9 @@
 .FooterContainer {
+  width: 90%;
+  max-width: 980px;
   margin-bottom: 2rem;
-background-color: var(--gray-100);
+  background-color: var(--gray-100);
 }
-
 .FooterWrap{
 padding: 48px 24px;
 display: flex;
@@ -10,17 +11,13 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 max-width: 100%;
-margin: 0 auto;
 }
 .FooterLinksContainer{
 display: flex;
 justify-content: center;
-
 }
-
 .FooterLinksWrapper{ 
 display: flex;
-
 }
 .FooterLinkItems{
 display: flex;
@@ -59,4 +56,5 @@ font-size: 14px;
 }
 hr{
   margin-top: 2rem;
+  max-width: 980px;
 }

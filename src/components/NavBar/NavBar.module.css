@@ -1,33 +1,53 @@
-.a{
-   color: rgb(0, 86, 109);
-    text-decoration: none;
-  }
-.a:hover {
-  opacity: 0.7;
+header{
+  margin-top: 2rem;
+  display: flex;
+  width: 90%;
+  max-width: 980px;
+  align-items: center;
+  justify-content: space-between;  
 }
-.navbar{
+header .navbar{
   justify-content: center;
   display: flex;
   align-items: center;
-  margin: 0;
 }
-header{
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  margin:0 1rem 0 1rem; 
-  justify-content: center;  
-}
-.logo {
-  height: 4.5rem;
-  width: 13rem;
-}
-.navlist{ 
-  list-style: none;
-  display: flex;  
+
+
+header .avatar {
+  min-width: 3.1rem;
+  min-height: 3.1rem;
+  clip-path: circle(50% at 50% 50%);
+  max-width: 3.1rem;
+  max-height: 3.1rem;
   
 }
+span .span{
+  margin: 0;
+  box-sizing:border-box;
+  display: flex;
+  overflow:hidden; 
+  background:none;
+  opacity:1; 
+  position:relative;
+  padding: 0;
+}
+.navlist ol{ 
+  list-style: none;
+  display: flex;    
+}
 .navlist li {
+  flex-direction: row;
   letter-spacing: 2px;
-  margin-left: 0; 
+ 
+  list-style: none;
+} 
+.navlist .a:hover{
+  color:var(--blue-600);
+}
+.buttonlight{
+  width:1rem;
+  height: 1rem;
+}
+.navlist li+li{
+  margin-left: 4rem;
 }

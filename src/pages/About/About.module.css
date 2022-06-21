@@ -1,22 +1,23 @@
 .aboutcontainer{
+  width: 90%;
+  max-width: 980px;
   margin-top: 2rem;
 }
 .photo{
-  width:100%;
-  
+  width: 90%;
+  max-width: 980px;
   border-radius: 20px;
   justify-content: center;
   display: flex;
   align-items: center;
 }
-.aboutcontent{
-  margin-top: 2rem;
-}
-p{
+.aboutcontent p{
+  margin-top: 1rem;
   color: black;
- margin-top: 1.5rem;
- letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
 }
+
 .buttons{
   width: 150px;
   height: 40px;
@@ -27,15 +28,13 @@ p{
   font-weight: bold;
   font-size:1rem;
   transition: color 0.3s, background-color 0.3s;
-  margin-top: 2rem; 
- 
+  margin-top: 2rem;   
+  font-size: 19px; 
 }
-button:hover{
+.aboutcontainer button:hover{
   background: var(--blue-400);
-
   cursor: pointer;
 }
-
 a{
   text-decoration: none;
   color:var(--blue-400);

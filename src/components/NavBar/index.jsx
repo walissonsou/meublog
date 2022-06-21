@@ -1,19 +1,30 @@
-import logo from '../../assets/logo.png';
+import avatar from '../../assets/avatar.png';
 import styles from './NavBar.module.css';
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {
 return (
     <header className={styles.navbar}> 
-      <Link to="/" className={styles.a} >
-        <img src={logo} className={styles.logo} alt="logo" /> 
+      <Link to="/" className={styles.linkdafoto} >
+       <span className={styles.span}>
+        <img src={avatar} className={styles.avatar} alt="logo" /> 
+       </span>
       </Link>    
-     <ul className={styles.navlist}>   
-        <li><Link className={styles.a} to="/">HOME </Link> </li>
-        <li><Link className={styles.a} to="/sobre"> SOBRE </Link></li>
-        <li><Link className={styles.a} to="/blog"> BLOG </Link> </li>
-        <li><Link className={styles.a} to="/livros"> LIVROS </Link></li>
-      </ul>
+     <nav className={styles.navlist}>   
+       <ol>
+          <li><Link className={styles.a} to="/">Início </Link> </li>
+          <li><Link className={styles.a} to="/sobre"> Sobre </Link></li>
+          <li><Link className={styles.a} to="/blog"> Blog </Link> </li>
+          <li><Link className={styles.a} to="/livros"> Livros </Link></li>
+        </ol>
+      </nav>
+      <div>
+        <div className={styles.buttonlight}>
+          <button>
+
+          </button>
+        </div>
+      </div>
     </header>
 
     

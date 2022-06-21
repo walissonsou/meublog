@@ -16,8 +16,11 @@ export default function About() {
     concurso realizado em 2017.</p>
 
    <p>  Eu cresci em Pernambuco nos arredores de Paulista (a distância perfeita da cidade enquanto me divertia pelos rios, parques com amigos. Venho de uma formação de estudo de Análise e Desenvolvimento de Sistemas. Adoro trabalhar na área de códigos. Algumas coisas que me animam são CSS, React e interfaces.</p>
-
+   
+    
+    <p>
     Nas horas vagas adoro estar ao ar livre, ler livros, treinar 🏋🏽, surfar 🏄 e viajar ✈️.
+    </p>
     </p>
     <button className={styles.buttons}> Contact me </button>
     </div>
