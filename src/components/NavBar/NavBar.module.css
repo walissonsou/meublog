@@ -28,11 +28,9 @@ header .avatar {
   
 }
 nav .navlist{
-  margin-left: 4rem;
-  padding: 0;
+   padding: 0;
   display: flex;
-  justify-content: flex-start;
-  margin:0;
+   margin:0;
   margin-right: 3rem;
 }
 
