@@ -1,6 +1,10 @@
-.aboutcontainer{
-  width: 90%;
+.headercontainer{
   max-width: 980px;
+  width: 100%;
+}
+.aboutcontainer{
+  
+  
   margin-top: 2rem;
 }
 .photo{

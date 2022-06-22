@@ -1,0 +1,32 @@
+.container{
+  background: transparent;  
+  margin-top: 5rem;
+  width: 90%;
+  max-width: 980px;
+  display: flex;  
+  flex-direction: column;
+}
+.input{
+  width: 269px;
+  height: 50px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-300); 
+  padding: 10px;
+}
+.input > i {
+  margin-right: .5rem;
+  font-size: 1.2rem;
+  color:#3586ff;
+
+}
+.input > input {
+  
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  
+}

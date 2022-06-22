@@ -1,8 +1,8 @@
-import React from 'react'
 
+import styles from './Project.module.css'
 export const Project = () => {
   return (
-    <div>
+    <div className={styles.container}>
     <div>
       <h2> Selecionar projeto</h2>
       <a href="#">
@@ -17,7 +17,7 @@ export const Project = () => {
         </div>
       </div>
       </a>
-      <h3>Nome do projeto</h3>
+      <h3>Nome do prdddojeto</h3>
       <p> breve explicação</p>
       <div>
         <a href="#"> Link do repo </a>

@@ -2,7 +2,7 @@ footer{
   margin-top: 10rem;
   width: 100%;
   max-width: 980px;
-  position: relative;
+  position: absolute;
   background:#3586ff;
   min-height: 100px;
   padding: 20px 50px;
@@ -21,11 +21,13 @@ footer .menu{
   justify-content: center;
   align-items: center;
   margin: 10px 0; 
+  gap: 2rem;
   
 }
  .FooterContainer .socialicon li,
  footer .menu li
  {
+  
   list-style: none;  
 }
 .FooterContainer .socialicon li a
