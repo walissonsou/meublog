@@ -6,7 +6,7 @@ export const Project = () => {
   const [ projects, setProjects ] = useState([])
   
   useEffect(() => {
-  axios.get('https://api.github.com/users/walissonsou/)repos')
+  axios.get('https://api.github.com/users/walissonsou/repos')
     .then(res => res.json())
     .then(data => setProjects(data))
  }, [])
