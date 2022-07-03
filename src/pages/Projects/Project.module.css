@@ -2,3 +2,10 @@
   width: 100%;
   max-width: 980px;
 }
+@media (max-width: 630px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+
+  }
+}

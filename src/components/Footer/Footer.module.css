@@ -1,10 +1,10 @@
 footer{
   margin-top: 10rem;
   width: 100%;
-  max-width: 980px;
+  max-width: 900px;
   position: absolute;
   background:#3586ff;
-  min-height: 100px;
+  min-height: 50px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
@@ -12,15 +12,14 @@ footer{
   flex-direction: column;
 }
 footer .socialicon,
-footer .menu{
-  margin-left: 1rem;
+footer ol{
+  margin: 0 auto;
   justify-content: center;
-   align-items: center;
+  align-items: center;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0; 
   gap: 2rem;
   
 }
@@ -57,13 +56,12 @@ footer .menu li a {
 
 footer .menu li a:hover {
   opacity: 1;
-
 }
 .FooterContainer p {
   justify-content: center;
   display: flex;
   color: white;
-  text-align: center;
+ 
   margin-top: 1rem;
   margin-bottom: .8rem;
   font-size: 1.1rem;

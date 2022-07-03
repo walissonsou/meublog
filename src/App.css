@@ -14,23 +14,23 @@
   --blue-vivo: #3586ff;
 }
 * {
+  
   width: 100%;
-  max-width: 980px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
-}
+
+
 body {
 
   background-color: var(--gray-100);
   color: var(--gray-300);
   -webkit-font-smoothing: antialiased;
   font-family: 'Josefin Sans', sans-serif;
-   height: 100vh;   
+  
   
  
 }

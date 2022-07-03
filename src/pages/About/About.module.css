@@ -9,14 +9,14 @@
 }
 .photo{
   width: 100%;
-  max-width: 980px;
+  max-width: 750px;
   border-radius: 20px;
   justify-content: center;
   display: flex;
   align-items: center;
 }
 .aboutcontent p{
-  margin-top: 1rem;
+  margin: .5rem auto;
   color: black;
   line-height: 1.5rem;
   letter-spacing: 0.5px;
@@ -43,4 +43,18 @@ a{
   text-decoration: none;
   color:var(--blue-400);
   font-weight: bold;
+}
+@media (max-width: 630px) {
+  .aboutcontent {
+    flex-direction: column;
+    text-align: center;
+
+  }
+}
+@media (max-width: 630px) {
+  .buttonemail {
+    flex-direction: column;
+    text-align: center;
+
+  }
 }

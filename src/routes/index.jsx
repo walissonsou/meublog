@@ -15,8 +15,7 @@ export default function AplicationRoutes() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-      <Route path="/" element={<Home/>}/>   
-       
+      <Route path="/" element={<Home/>}/>          
       <Route path="/blog" element={<Post />}/> 
       <Route path="/livros" element={<Books/>}/> 
       <Route path="/sobre" element={<About/>}/>    
