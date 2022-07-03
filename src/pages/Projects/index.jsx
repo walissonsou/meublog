@@ -1,35 +1,34 @@
+import React, {useState } from 'react';
+import axios from 'axios';
 
 import styles from './Project.module.css'
+
+
 export const Project = () => {
+
+  const [ projects, setProjects ] = useState([])
+ 
+  const getRepos = () => {
+  axios.get('https://api.github.com/users/walissonsou/)repos')
+    .then(res => res.json())
+    .then(data =>setProjects(data))
+    .catch(error => {
+      console.log(error);
+    })
+  };
+
   return (
     <div className={styles.container}>
+    <h2> Projetos no GitHub </h2>
     <div>
-      <h2> Selecionar projeto</h2>
-      <a href="#">
-      <div>
-        <div>
-          <div>
-            <span>
-              <span></span>
-              <img />
-            </span>
-          </div>
-        </div>
-      </div>
-      </a>
-      <h3>Nome do prdddojeto</h3>
-      <p> breve explicação</p>
-      <div>
-        <a href="#"> Link do repo </a>
-      </div>
-    </div>
-    <br/> 
-
-    <h3> Selecione Repositórios</h3>
-
-    <div>
-      <a href="#"></a>
-    </div>
-    </div>
-  )
-}
+    {      
+      projects.map((project) =>
+      <div key={project.id}>
+      <p>{project.name}</p>      
+      </div>    
+     )
+  }
+    
+  </div>
+  </div>
+  )}
