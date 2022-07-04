@@ -1,30 +1,25 @@
-import React, {useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useContext } from "react";
+import { MyContext } from "../../context/myContext";
 
 export const Project = () => {
+  const [projects] = useContext(MyContext);
 
-  const [ projects, setProjects ] = useState([])
-  
-  useEffect(() => {
-  axios.get('https://api.github.com/users/walissonsou/repos')
-    .then(res => res.json())
-    .then(data => setProjects(data))
- }, [])
- 
-return (
-  <div>
-    <ul>
-      {
-        projects.map(projects => {
+  return (
+    <div >
+      <h1> Meus projetos  </h1>
+      <ul>
+        {projects.map((projects) => {
           return (
-            <li>
-              <h3> {projects.name}</h3>
-            </li>
-          )
-        })
-      }
-    </ul>
-  </div>
-
-)
-    }
+            <div key={projects.id}>
+              <li style={{ marginTop: 10 }}>
+                <a href={projects.clone_url} target="_blank" rel="noreferrer">
+                  {projects.name}
+                </a>
+              </li>
+            </div>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
