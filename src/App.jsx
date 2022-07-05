@@ -5,7 +5,7 @@ import AplicationRoutes from "./routes/index";
 function App() {
   return (
     <ContextProvider>
-      <AplicationRoutes />
+            <AplicationRoutes />
     </ContextProvider>
   );
 }

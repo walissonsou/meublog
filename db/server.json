@@ -1,0 +1,62 @@
+{
+"livros": 
+  [
+  
+    {
+      
+      "id": 1,
+      "title": "Michelle Obama",
+      "description": "Com uma vida repleta de realizações significativas, Michelle Obama se consolidou como uma das mulheres mais icônicas e cativantes de nosso tempo. ",
+      "image": "https://i.imgur.com/yDo4Jnu.jpeg",
+      "rating": {
+        "rate": 5
+      } 
+    },
+    {
+      "id": 2,
+      "title": "Se não eu, quem vai fazer você feliz?",
+      "description": "Um dos maiores ícones do rock nacional, Alexandre Magno Abrão, o Chorão, conquistou o Brasil sobretudo pela sua entrega na hora de compor e cantar.  ",
+      "image": "https://i.imgur.com/sia1K6a.jpeg",
+      "rating": {
+        "rate": 5
+      } 
+      },
+      {
+        "id": 3,
+        "title": "1808",
+        "description": "A fuga da família real portuguesa para o Rio de Janeiro ocorreu num dos momentos mais apaixonantes e revolucionários do Brasil, de Portugal e do mundo. ",
+        "image": "https://i.imgur.com/PGx9Tcx.jpeg",
+        "rating": {
+          "rate": 5
+        } 
+      } ,   {
+        "id": 4,
+        "title": "1822",
+        "description": "Em 1822, o escritor compara diferentes relatos sobre o dia 7 de setembro que redefiniu os rumos do nosso país. Mais do que desmistificar o grito da independência às margens do Ipiranga, o escritor analisa como D. Pedro conseguiu, apesar de todas as dificuldades, fazer do Brasil uma nação de proporções monumentais. ",
+        "image": "https://i.imgur.com/lSYCej6.jpeg",
+        "rating": {
+          "rate": 4.0
+        } 
+      } ,
+      {
+        "id": 5,
+        "title": "1889",
+        "description": "Nas últimas semanas de 1889, a tripulação de um navio de guerra brasileiro ancorado no porto de Colombo, capital do Ceilão (atual Sri Lanka), foi pega de surpresa pelas notícias alarmantes que chegavam do outro lado do mundo. ",
+        "image": "https://i.imgur.com/IFYRl4G.jpeg",
+        "rating": {
+          "rate": 3.9
+        } 
+      },
+      {
+        "id": 6,
+        "title": "Uma breve história do tempo",
+        "description": "Uma das mentes mais geniais do mundo moderno, Stephen Hawking guia o leitor na busca por respostas a algumas das maiores dúvidas da humanidade. ",
+        "image": "https://i.imgur.com/JMJ5SNi.jpg",
+        "rating": {
+          "rate": 5
+        } 
+      }       
+      
+  ]
+}
+    
