@@ -10,9 +10,7 @@ export const ContextProvider = ({ children }) => {
   }, []);
 
   const getRepos = async () => {
-    await api
-    .get("repos")
-    .then((res) => setProjects(res.data));
+    await api.get("repos").then((res) => setProjects(res.data));
   };
 
   return (

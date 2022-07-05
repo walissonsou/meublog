@@ -35,7 +35,7 @@
   transition: 0.3s;
 }
 .posts p {
-  color: var(--gray-300);
+  color: var(--gray-600);
   margin-top: .5rem;
   line-height: 1.6rem;
 }

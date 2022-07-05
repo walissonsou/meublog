@@ -6,6 +6,13 @@
   display: flex;  
   flex-direction: column;
 }
+.bookcontainer h2 {
+  margin-top: 1rem;
+color: black;
+display: flex;
+text-align: center;
+justify-content: center;
+}
 .bookcontent{
   width: 90%;
   max-width: 980px;
@@ -34,4 +41,7 @@
   width: 14rem;
   height: 20rem;
   border-radius: 10px;
+}
+p {
+  color:var(--gray-600)
 }

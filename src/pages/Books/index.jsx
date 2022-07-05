@@ -2,20 +2,18 @@ import React, { useState, useEffect } from "react";
 import styles from "./Books.module.css";
 import { Link } from "react-router-dom";
 import { apibook } from "../../services/api";
+import bookcurrent from "../../assets/bookbfg.jpg";
 
 export const Books = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    getBooks()
-    .catch((err) => console.log({ err }));
+    getBooks().catch((err) => console.log({ err }));
   }, []);
 
   const getBooks = async () => {
-    await apibook
-    .get("livros")
-    .then((res) => setBooks(res.data))
+    await apibook.get("livros").then((res) => setBooks(res.data));
   };
-  
+
   return (
     <div className={styles.bookcontainer}>
       <div className={styles.bookcontent}>
@@ -25,34 +23,46 @@ export const Books = () => {
           resenhas.
         </p>
       </div>
+      <h2> Lidos </h2>
       <ul className={styles.booklist}>
         {books?.map((books) => {
           return (
             <div key={books.id}>
               <li>
-              <Link to="#" className={styles.link}>
+                <Link to="#" className={styles.link}>
                   <div className={styles.contentitem}>
-                    <span>                
-                    <img src={books.image} alt="livro" className={styles.image}>                      
-                      </img>
+                    <span>
+                      <img
+                        src={books.image}
+                        alt="livro"
+                        className={styles.image}
+                      
+                      ></img>
                     </span>
                   </div>
-                  
+
                   <strong>{books.title}</strong>
-                  </Link>
-                  <p>{books.description} </p>
-                  <div className={styles.rating}></div>
-                
+                </Link>
+                <p>{books.description} </p>
+                <div className={styles.rating}></div>
               </li>
             </div>
           );
         })}
       </ul>
       <h2> Lendo atualmente </h2>
-      <ul className={styles.readcurrent}>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ul className={styles.booklist}>
+      <div className={styles.contentitem}>
+        <span>
+          <img src={bookcurrent} alt="livro" className={styles.image}></img>
+        </span>
+      </div>
+
+      <strong>.</strong>
+      <p>
+       The BFG is no ordinary bone-crunching giant. He is far too nice and
+        jumbly. It's lucky for Sophie that he is.
+      </p>      
       </ul>
     </div>
   );

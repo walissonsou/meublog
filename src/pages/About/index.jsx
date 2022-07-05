@@ -32,10 +32,9 @@ export default function About() {
         </p>
       </p>
       <div className={styles.buttonemail}>
-      <a className={styles.myemail} href="mailto:walissonsouza96@hotmail.com">
-        <button className={styles.buttons}>Contate me</button>
-        
-      </a>
+        <a className={styles.myemail} href="mailto:walissonsouza96@hotmail.com">
+          <button className={styles.buttons}>Contate me</button>
+        </a>
       </div>
     </div>
   );

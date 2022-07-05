@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useState } from "react";
 import { myCustomer } from "./myCustomer";
 
 export const CustomerProvider = ({ children }) => {
