@@ -13,7 +13,6 @@ export const Books = () => {
   const getBooks = async () => {
     await apibook.get("livros").then((res) => setBooks(res.data));
   };
-
   return (
     <div className={styles.bookcontainer}>
       <div className={styles.bookcontent}>
@@ -35,12 +34,10 @@ export const Books = () => {
                       <img
                         src={books.image}
                         alt="livro"
-                        className={styles.image}
-                      
+                        className={styles.image}                      
                       ></img>
                     </span>
                   </div>
-
                   <strong>{books.title}</strong>
                 </Link>
                 <p>{books.description} </p>

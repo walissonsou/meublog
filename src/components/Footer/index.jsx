@@ -31,13 +31,13 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/walissons/" target="_blank">
+          <a href="https://www.instagram.com/walissons/" target="_blank" rel="noreferrer">
             {" "}
             <ion-icon name="logo-instagram"></ion-icon>{" "}
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/walisson-souza-7913b121a/" target="_blank">
+          <a href="https://www.linkedin.com/in/walisson-souza-7913b121a/" target="_blank" rel="noreferrer">
             {" "}
             <ion-icon name="logo-linkedin"></ion-icon>{" "}
           </a>
