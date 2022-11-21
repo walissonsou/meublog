@@ -13,7 +13,7 @@ export const Header = () => {
             você encontrará <br /> todas as coisas em que estou pensando
             atualmente.{" "}
           </strong>
-          <a href="http://localhost:3000/sobre">
+          <a href="/sobre">
             <button type="button" className={styles.buttonabout}>
               {" "}
               Mais sobre mim
