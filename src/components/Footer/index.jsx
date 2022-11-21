@@ -31,13 +31,21 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/walissons/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/walissons/"
+            target="_blank"
+            rel="noreferrer"
+          >
             {" "}
             <ion-icon name="logo-instagram"></ion-icon>{" "}
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/walisson-souza-7913b121a/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/in/walisson-souza-7913b121a/"
+            target="_blank"
+            rel="noreferrer"
+          >
             {" "}
             <ion-icon name="logo-linkedin"></ion-icon>{" "}
           </a>
@@ -45,16 +53,16 @@ const Footer = () => {
       </ol>
       <ol className={styles.menu}>
         <li>
-          <a href="#"> Início </a>
+          <a href="/"> Início </a>
         </li>
         <li>
-          <a href="http://localhost:3000/sobre"> Sobre </a>
+          <a href="/sobre"> Sobre </a>
         </li>
         <li>
-          <a href="#"> Blog </a>
+          <a href="/blog"> Blog </a>
         </li>
         <li>
-          <a href="#"> Linkedin</a>
+          <a href="https://www.linkedin.com/in/walisson-souza-7913b121a/"> Linkedin </a>
         </li>
       </ol>
       <p> © Walisson Souza 2022</p>
