@@ -13,8 +13,7 @@ export default function About() {
         </p>
         <p>
           No momento, estou trabalhando na KorpViaSoft, projetando e construindo
-          sistemas ERP. Antes disso, trabalhei na{" "}
-          <a href="#">Marinha do Brasil</a>, concurso realizado em 2017.
+          sistemas ERP.
         </p>
 
         <p>
