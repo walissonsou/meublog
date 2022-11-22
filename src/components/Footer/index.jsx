@@ -62,7 +62,7 @@ const Footer = () => {
           <a href="/blog"> Blog </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/walisson-souza-7913b121a/"> Linkedin </a>
+          <a href="/livros"> Livro </a>
         </li>
       </ol>
       <p> © Walisson Souza 2022</p>

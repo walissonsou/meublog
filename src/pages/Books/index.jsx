@@ -3,6 +3,7 @@ import styles from "./Books.module.css";
 import { Link } from "react-router-dom";
 import { apibook } from "../../services/api";
 import bookcurrent from "../../assets/bookbfg.jpg";
+import killmygiants from "../../assets/book1.jpg";
 
 export const Books = () => {
   const [books, setBooks] = useState([]);
@@ -34,7 +35,7 @@ export const Books = () => {
                       <img
                         src={books.image}
                         alt="livro"
-                        className={styles.image}                      
+                        className={styles.image}
                       ></img>
                     </span>
                   </div>
@@ -49,17 +50,29 @@ export const Books = () => {
       </ul>
       <h2> Lendo atualmente </h2>
       <ul className={styles.booklist}>
-      <div className={styles.contentitem}>
-        <span>
-          <img src={bookcurrent} alt="livro" className={styles.image}></img>
-        </span>
-      </div>
+        <div className={styles.contentitem}>
+          <span>
+            <img src={bookcurrent} alt="livro" className={styles.image}></img>
+          </span>
+        </div>
 
-      <strong>.</strong>
-      <p>
-       The BFG is no ordinary bone-crunching giant. He is far too nice and
-        jumbly. It's lucky for Sophie that he is.
-      </p>      
+        <strong>.</strong>
+        <p>
+          The BFG is no ordinary bone-crunching giant. He is far too nice and
+          jumbly. It's lucky for Sophie that he is.
+        </p>
+      </ul>
+      <ul className={styles.booklist}>
+        <div className={styles.contentitem}>
+          <span>
+            <img src={killmygiants} alt="livro" className={styles.image}></img>
+          </span>
+        </div>
+
+        <strong>.</strong>
+        <p>
+        This is a story about David, a young man who like many of us has giants ( or dreams ).
+        </p>
       </ul>
     </div>
   );

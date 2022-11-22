@@ -8,7 +8,7 @@ export default function About() {
 
       <p className={styles.aboutcontent}>
         <p>
-          Ei, eu sou Walisson, um desenvolvedor frontEnd atualmente morando em
+          Ei, eu sou Walisson, um Desenvolvedor FullStack atualmente morando em
           Paulista, PE.
         </p>
         <p>
@@ -23,12 +23,12 @@ export default function About() {
           perfeita da cidade enquanto me divertia pelos rios, parques com
           amigos. Venho de uma formação de estudo de Análise e Desenvolvimento
           de Sistemas. Adoro trabalhar na área de códigos. Algumas coisas que me
-          animam são CSS, React e interfaces.
+          animam são Banco de dados, Python, CSS, React e inovação.
         </p>
 
         <p>
           Nas horas vagas adoro estar ao ar livre, ler livros, treinar 🏋🏽,
-          surfar 🏄 e viajar ✈️.
+           e viajar ✈️.
         </p>
       </p>
       <div className={styles.buttonemail}>
