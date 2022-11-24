@@ -1,7 +1,23 @@
 import React from "react";
 import styles from "./Posts.module.css";
+import { useState, useEffect } from "react";
+
 
 export default function Posts() {
+  
+  const [ posts, setPosts] = useState([]);
+  useEffect(() => {
+    getPosts();
+  }, [])
+  
+  const getPosts = async () => {
+    await fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => res.json())
+    .then((data) => setPosts(data))
+  }
+
+  let dataLongOutput = new Date("Jan 29, 2020");
+
   return (
     <>
       <header>
@@ -10,35 +26,17 @@ export default function Posts() {
 
       <main className={styles.container}>
         <div className={styles.posts}>
-          <a href="f">
-            <time> 12 de maio </time>
-            <strong> Titulo da página </strong>
-            <p>
-              Quando a gente começa a estudar o React, a ideia de poder ter
-              estados guardados em cada componente abre muitas portas pra formas
-              mais eficientes de se escrever aplicações em JavaScript.{" "}
-            </p>
-          </a>
-
-          <a href="f">
-            <time> 12 de maio </time>
-            <strong> Titulo da página </strong>
-            <p>
-              Quando a gente começa a estudar o React, a ideia de poder ter
-              estados guardados em cada componente abre muitas portas pra formas
-              mais eficientes de se escrever aplicações em JavaScript.{" "}
-            </p>
-          </a>
-
-          <a href="f">
-            <time> 12 de maio </time>
-            <strong> Titulo da página </strong>
-            <p>
-              Quando a gente começa a estudar o React, a ideia de poder ter
-              estados guardados em cada componente abre muitas portas pra formas
-              mais eficientes de se escrever aplicações em JavaScript.{" "}
-            </p>
-          </a>
+          {posts.map((posts) => {
+            return (
+              <div key={posts.id}>
+                <a href="/blog">
+                  <time> </time>
+                  <strong>{posts.title} </strong>
+                  <p>{posts.body}</p>
+                </a>
+              </div>            
+            );            
+          })}         
         </div>
       </main>
     </>

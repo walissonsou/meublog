@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { MyContext } from "../../context/myContext";
 import styles from "./Project.module.css";
+
+
 export const Project = () => {
   const [projects] = useContext(MyContext);
 

@@ -7,3 +7,7 @@ export const api = axios.create({
 export const apibook = axios.create({
   baseURL: "http://localhost:3333/"
 });
+
+export const apiposts = axios.create({
+  baseURL: "https://jsonplaceholder.typicode.com/"
+})
