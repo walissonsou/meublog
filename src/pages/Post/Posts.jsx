@@ -9,14 +9,16 @@ export default function Posts() {
   useEffect(() => {
     getPosts();
   }, [])
-  
+
+  let page = 1
+
   const getPosts = async () => {
-    await fetch('https://jsonplaceholder.typicode.com/posts')
+    await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5&_page=${page}`)
     .then((res) => res.json())
     .then((data) => setPosts(data))
   }
 
-  let dataLongOutput = new Date("Jan 29, 2020");
+  const d = new Date("15 Apr 2015");
 
   return (
     <>
@@ -42,3 +44,16 @@ export default function Posts() {
     </>
   );
 }
+window.addEventListener('scroll', () => {
+  const showLoader = () => {
+    
+  }
+
+  const {clientHeight, scrollHeight, scrollTop} = document.documentElement
+
+  const faltamPixelsParaAcabar =  scrollTop + clientHeight >= scrollHeight - 10
+
+  if(faltamPixelsParaAcabar){
+    showLoader()
+  }
+})

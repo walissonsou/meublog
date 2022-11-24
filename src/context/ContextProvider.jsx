@@ -20,7 +20,7 @@ export const ContextProvider = ({ children}) => {
   
   const getPosts = async () => {
     await apiposts.get("posts") 
-    .then((res) => res.json ={ data:[ res]})
+    .then((res) => res.json())
     .then((data) => setPosts((data))
   )};
 
