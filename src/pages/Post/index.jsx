@@ -12,7 +12,7 @@ export default function Post() {
   const getPost = async () => {
     await fetch(`${url}/1`)
       .then((res) => res.json())
-      .then((data) => setPost(data));
+      .then((data) => console.log(data));
   };
 
   return (
@@ -28,7 +28,8 @@ export default function Post() {
             );
           })}
 
-          <button onClick={()=> getPost()}> Clique aqui para obter o post </button>
+           <a href="/blog"><button onClick={()=> getPost()}>Ambiente em manutenção, desculpe pelo transtorno.</button></a>
+          <img alt="Readme" title="Readme" src="https://rafaelherculano.com.br/assets/images/busy.gif" />
         </div>
       </div>
     </>
