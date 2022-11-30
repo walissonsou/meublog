@@ -3,7 +3,9 @@ import Home from "../pages/Home/Home";
 import NavBar from "../components/NavBar";
 import About from "../pages/About";
 import Posts from "../pages/Post/Posts";
-import Post from "../pages/Post/index";
+import Post from "../pages/Post/Post";
+
+
 
 import { Books } from "../pages/Books";
 import Footer from "../components/Footer";
