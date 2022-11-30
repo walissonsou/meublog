@@ -3,21 +3,23 @@ import { useState, useEffect } from "react";
 
 export default function Post() {
   const url = "https://jsonplaceholder.typicode.com/posts";
-  let id = 1
-  
+
   const [post, setPost] = useState([]);
   useEffect(() => {
     getPost();
   }, {});
 
   const getPost = async () => {
-    await fetch(`${url}/${id}`)
+    await fetch(`${url}/1`)
       .then((res) => res.json())
       .then((data) => console.log(data));
   };
 
   return (
     <>
+      <a href="/blog"><button onClick={()=> getPost()}>Ambiente em manutenção, desculpe pelo transtorno.</button></a>
+      <img alt="Readme" title="Readme" src="https://rafaelherculano.com.br/assets/images/busy.gif" />
+
       <div className={styles.container}>
         <div className={styles.content}>
           {post.map((post) => {
@@ -27,7 +29,7 @@ export default function Post() {
                 <p> {post.body} </p>
               </div>
             );
-          })}               
+          })}
         </div>
       </div>
     </>

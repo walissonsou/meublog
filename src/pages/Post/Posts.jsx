@@ -18,19 +18,11 @@ export default function Posts() {
       .then((res) => res.json())
       .then((data) => setPosts(data));
   };
-
-
-
-
-
-
   return (
-    <>
-    
+    <>    
       <header>
         <title> Posts | My Blog</title>
-      </header>
-
+      </header>  
       <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map((posts) => {
