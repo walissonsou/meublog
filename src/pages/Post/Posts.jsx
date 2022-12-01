@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "./Posts.module.css";
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 export default function Posts() {
   const d = new Date("15 Apr 2015");
   const url = "https://jsonplaceholder.typicode.com/posts";
 
- 
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     getPosts();
@@ -19,20 +18,21 @@ export default function Posts() {
       .then((data) => setPosts(data));
   };
   return (
-    <>    
+    <>
       <header>
         <title> Posts | My Blog</title>
-      </header>  
+      </header>
       <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map((posts) => {
             return (
-              <div key={posts.id}>
-                <a href="/posts">
+              <div key={posts.id} className={styles.postsu}>
+                <div>
                   <time> </time>
-                  <strong>{posts.title} </strong>
+                  <h2>{posts.title} </h2>
                   <p>{posts.body}</p>
-                </a>
+                  </div>
+                <Link to={`/posts/${posts.id}`}> Ler mais </Link>
               </div>
             );
           })}
