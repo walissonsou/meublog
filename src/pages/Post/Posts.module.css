@@ -8,6 +8,7 @@
 .posts{
  max-width: 720px;
  margin: 5rem auto 0;
+ 
 }
 
 .posts a{
@@ -43,4 +44,11 @@
 .posts :hover strong{
   color: #3586ff;
 
+}
+.postsu{
+  border-bottom: 2px solid rgb(182, 180, 180);
+}
+
+.postsu h2::first-letter{
+  text-transform: uppercase;
 }
