@@ -1,14 +1,17 @@
 import React from "react";
 import styles from "./Posts.module.css";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function Posts() {
   const d = new Date("15 Apr 2015");
   const url = "https://jsonplaceholder.typicode.com/posts";
 
+  const navigate = useNavigate();
+
   const [posts, setPosts] = useState([]);
+
   useEffect(() => {
-    getPosts();
+    getPosts().catch((err) => console.log(err));
   }, []);
 
   let page = 1;
@@ -17,6 +20,8 @@ export default function Posts() {
       .then((res) => res.json())
       .then((data) => setPosts(data));
   };
+  
+  
   return (
     <>
       <header>
@@ -24,15 +29,24 @@ export default function Posts() {
       </header>
       <main className={styles.container}>
         <div className={styles.posts}>
-          {posts.map((posts) => {
+          {posts.map((post) => {
+            const handleNavigateToPost = () => {
+              navigate(`${post.id}`, {
+                state: { id: post.id, title: post.title, body: post.body },
+              });
+            };
+
             return (
-              <div key={posts.id} className={styles.postsu}>
+              <div key={post.id} className={styles.postsu}>
                 <div>
                   <time> </time>
-                  <h2>{posts.title} </h2>
-                  <p>{posts.body}</p>
-                  </div>
-                <Link to={`/posts/${posts.id}`}> Ler mais </Link>
+                  <h2>{post.title} </h2>
+                  <p>{post.body}</p>
+                </div>
+                <a 
+                  onClick={() => handleNavigateToPost()} >
+                  Ler mais
+                </a>              
               </div>
             );
           })}
