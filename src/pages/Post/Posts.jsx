@@ -43,10 +43,10 @@ export default function Posts() {
                   <h2>{post.title} </h2>
                   <p>{post.body}</p>
                 </div>
-                <a 
+                <button> <a 
                   onClick={() => handleNavigateToPost()} >
                   Ler mais
-                </a>              
+                </a>    </button>          
               </div>
             );
           })}
