@@ -15,7 +15,7 @@ return (
        <ol>
           <li><Link className={styles.a} to="/">Início </Link> </li>
           <li><Link className={styles.a} to="/sobre"> Sobre </Link></li>
-          <li><Link className={styles.a} to="/blog"> Blog </Link> </li>
+          <li><Link className={styles.a} to="/posts"> Blog </Link> </li>
           <li><Link className={styles.a} to="/livros"> Livros </Link></li>
         </ol>
       </nav>
