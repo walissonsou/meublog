@@ -9,13 +9,15 @@ import { Books } from "../pages/Books";
 import Footer from "../components/Footer";
 
 export default function AplicationRoutes() {
+  
+
   return (
     <BrowserRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Posts />} />
-        <Route path="/posts/1" element={<Post />} />
+        <Route path="/posts" element={<Posts />} /> 
+        <Route path="/posts/:postId" element={<Post />} />              
         <Route path="/livros" element={<Books />} />
         <Route path="/sobre" element={<About />} />
       </Routes>
