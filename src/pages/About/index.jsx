@@ -19,8 +19,8 @@ export default function About() {
         <p>
           {" "}
           Eu cresci em Pernambuco nos arredores de Paulista (a distância
-          perfeita da cidade enquanto me divertia pelos rios, parques com
-          amigos. Venho de uma formação de estudo de Análise e Desenvolvimento
+          perfeita da cidade enquanto me divertia pelos rios e parques com
+          amigos). Venho de uma formação de estudo de Análise e Desenvolvimento
           de Sistemas. Adoro trabalhar na área de códigos. Algumas coisas que me
           animam são Banco de dados, Python, CSS, React e inovação.
         </p>
