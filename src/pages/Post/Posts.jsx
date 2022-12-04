@@ -2,10 +2,8 @@ import React from "react";
 import styles from "./Posts.module.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { apiposts } from "../../services/api";
 export default function Posts() {
-  const d = new Date("15 Apr 2015");
-  const url = "https://jsonplaceholder.typicode.com/posts";
-
   const navigate = useNavigate();
 
   const [posts, setPosts] = useState([]);
@@ -14,11 +12,10 @@ export default function Posts() {
     getPosts().catch((err) => console.log(err));
   }, []);
 
-  let page = 1;
+
   const getPosts = async () => {
-    await fetch(`${url}?_limit=5&_page=${page}`)
-      .then((res) => res.json())
-      .then((data) => setPosts(data));
+    await apiposts.get('/')
+      .then((res)  => setPosts(res.data));
   };
   
   
