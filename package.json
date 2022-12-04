@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@prismicio/client": "5.1.1", 
+    "@prismicio/client": "5.1.1",
     "@prismicio/react": "^2.4.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -11,7 +11,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/styled-components": "^5.1.25",
-    "axios": "^0.27.2",
+    "axios": "^1.2.0",
     "phosphor": "^0.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
