@@ -4,7 +4,6 @@
 }
 .aboutcontainer{
   
-  
   margin-top: 2rem;
 }
 .photo{
@@ -57,4 +56,27 @@ a{
     text-align: center;
 
   }
+}
+.containerForm{
+  display: flex; 
+ 
+  
+
+}
+input{
+  display: flex;
+  width: 100%;  
+}
+textarea{
+  
+  resize: none;
+  display: flex;
+  width: 50%;
+  height: 100px;
+}
+h1 {
+  color: var(--blue-100);
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
