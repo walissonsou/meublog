@@ -83,3 +83,12 @@ button a {
 button a {
   color: var(--blue-600);
 }
+input {
+  margin-top:2rem;
+  width: 50%;
+  height: 40px;    
+  border-radius: 10px;  
+  border: 2px solid var(--blue-600);
+  font-family:'Josefin Sans', sans-serif;
+  
+}
