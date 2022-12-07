@@ -8,7 +8,7 @@ export default function Posts() {
 
   const [posts, setPosts] = useState([]);
   const [ search, setSearch ] = useState('')
-  const [ filtredPosts, setFiltredPosts ] = useState([])
+ 
 
   useEffect(() => {
     getPosts().catch((err) => console.log(err));
@@ -19,10 +19,7 @@ export default function Posts() {
       .then((res)  => setPosts(res.data));
   };
 
-  useEffect(() => {
-    setFiltredPosts(posts.filter(post => post.title.includes(search)))
-  }, [search])
-  
+  const setFiltredPosts = posts.filter(post => post.title.includes(search))
   
   return (
     <>
@@ -42,7 +39,7 @@ export default function Posts() {
 
         { search.length > 0 ? (
           <div className={styles.posts}>
-          {filtredPosts.map((post) => {
+          {setFiltredPosts.map((post) => {
             const handleNavigateToPost = () => {
               navigate(`${post.id}`, {
                 state: { id: post.id, title: post.title, body: post.body },
