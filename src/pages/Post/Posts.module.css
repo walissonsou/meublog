@@ -49,6 +49,7 @@
   border-bottom: 2px solid rgb(182, 180, 180);
 }
 
-.postsu h2::first-letter{
+.postsu h2{
+  margin-top: 2rem;
   text-transform: uppercase;
 }
