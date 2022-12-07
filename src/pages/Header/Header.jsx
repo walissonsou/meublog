@@ -9,7 +9,7 @@ export const Header = () => {
             Hey, meu nome é <span>Walisson</span>.
           </h2>
           <strong>
-            Eu sou um Desenvolvedor FullStack . Este é o meu site pessoal - onde
+            Eu sou um Desenvolvedor Front-End . Este é o meu site pessoal - onde
             você encontrará <br /> todas as coisas em que estou pensando
             atualmente.{" "}
           </strong>
