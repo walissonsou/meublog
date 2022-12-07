@@ -22,13 +22,13 @@ export default function About() {
     }
 
    emailjs.send('service_jrte1ll', 'template_73hsets', templateParams, 'JToFexn9HGHuckn0s')
-   .then((res) => {
-    console.log('Enviei', res.status, res.text)
+   .then(() => {    
     setName('')
     setEmail('')
     setText('')
+
    }, (err) => {
-    console.log('ERRO:',err)
+    console.log(err)
    }) 
   }
 
