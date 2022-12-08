@@ -2,31 +2,19 @@ import styles from "./About.module.css";
 import euwal from "../../assets/euwal.png";
 
 import emailjs from '@emailjs/browser'
-import { useState } from 'react'
-import { useForm, formState } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
 export default function About() {
+ 
 
+  const { register, handleSubmit, formState, reset } = useForm()
+  const { isDirty, isValid, errors } = formState;
 
-  const { register, handleSubmit, formState, reset } = useForm({
-    defaultValues: {
-      email: '',
-      name: '',
-      text: ''
-    }
-  })
-  const { errors } = formState
-
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [text, setText] = useState('')
-
-  function sendEmail(data){     
-
+  function sendEmail(){  
     const templateParams = {
-      from_name: data.name,
-      message: data.text,
-      email: data.email
+      from_name: 'name',
+      message: 'text',
+      email: 'email'
     }
 
    emailjs.send('service_jrte1ll', 'template_73hsets', templateParams, 'JToFexn9HGHuckn0s')
@@ -74,31 +62,39 @@ export default function About() {
        
           <input 
             className="input"
-            type="text"
+            type="name"
             placeholder="Digite seu nome"
-            required
-            onChange={ e => setName(e.target.value)}
-            {...register('name', {required: 'oi oi'})} 
-                    
+            required           
+            {...register('name', { minLength: 3
+  })}                
+
+            styles={{ border: `1px solid ${errors?.name?.message ? 'red' : 'green' } `
+            }} 
             />
+           
+
             <input 
             className="input"
             type="email"          
             required
-            placeholder="Digite seu email"
-            onChange={ e => setEmail(e.target.value)}
-            {...register('email')}
-            
+            placeholder="Digite seu email"           
+            {...register('email', {required: 'O campo do email é obrigatório'})}
+
+            styles={{ border: `1px solid ${errors?.name?.message ? 'red' : 'green' } `
+            }} 
        
           />
+         
           <textarea
-            className="textarea"            
+            className={styles.textarea}            
             placeholder="Digite seu nome"
-            onChange={ e => setText(e.target.value)}
-            {...register('text')} 
+            required
+            {...register('text', {required: 'O campo do texto é obrigatório'})}
           
            />
-          <button className='sendForm' id="sendForm" type="submit" value='Enviar' onClick={() => sendEmail()}> Enviar </button>
+          <button id="sendForm"  type="submit" disabled={!isDirty && !isValid}
+          
+          > Enviar </button>
         </form>
       </div>
 

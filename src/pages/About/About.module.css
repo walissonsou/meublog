@@ -68,7 +68,7 @@ input{
   width: 100%;  
 }
 textarea{
-  
+    
   resize: none;
   display: flex;
   width: 50%;
@@ -79,4 +79,7 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+.textarea{
+  margin-top: 1.5rem;
 }
