@@ -38,7 +38,7 @@ export default function About() {
 
       <p className={styles.aboutcontent}>
         <p>
-          Ei, eu sou Walisson, um Desenvolvedor FullStack atualmente morando em
+          Ei, eu sou Walisson, um Desenvolvedor Front-End atualmente morando em
           Paulista, PE.
         </p>
         <p>
