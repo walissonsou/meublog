@@ -3,30 +3,35 @@ import euwal from "../../assets/euwal.png";
 
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
+import { useForm, formState } from 'react-hook-form'
 
 export default function About() {
+
+
+  const { register, handleSubmit, formState, reset } = useForm({
+    defaultValues: {
+      email: '',
+      name: '',
+      text: ''
+    }
+  })
+  const { errors } = formState
+
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [text, setText] = useState('')
 
-  function sendEmail(e){
-    e.preventDefault()
-    if(name === '' || email === '' || text === ''){
-      alert('Preencha todos os campos')
-      return
-    }
+  function sendEmail(data){     
+
     const templateParams = {
-      from_name: name,
-      message: text,
-      email: email
+      from_name: data.name,
+      message: data.text,
+      email: data.email
     }
 
    emailjs.send('service_jrte1ll', 'template_73hsets', templateParams, 'JToFexn9HGHuckn0s')
-   .then(() => {    
-    setName('')
-    setEmail('')
-    setText('')
-
+   .then(() => {   
+    reset()
    }, (err) => {
     console.log(err)
    }) 
@@ -36,7 +41,7 @@ export default function About() {
     <div className={styles.aboutcontainer}>
       <img className={styles.photo} src={euwal} alt="Walisson" />
 
-      <p className={styles.aboutcontent}>
+      <div className={styles.aboutcontent}>
         <p>
           Ei, eu sou Walisson, um Desenvolvedor Front-End atualmente morando em
           Paulista, PE.
@@ -59,39 +64,41 @@ export default function About() {
           Nas horas vagas adoro estar ao ar livre, ler livros, treinar 🏋🏽,
            e viajar ✈️.
         </p>
-      </p>          
+      </div>          
       <h1 className="h1Form">
             Contate - me
       </h1>
       <div className={styles.containerForm}>
         
-        <form className="form" onSubmit={() => {}} >
+        <form className="form" onSubmit={handleSubmit(sendEmail)} >
        
           <input 
             className="input"
             type="text"
-            placeHolder="Digite seu nome"
+            placeholder="Digite seu nome"
             required
             onChange={ e => setName(e.target.value)}
-            value={name}
-          />
+            {...register('name', {required: 'oi oi'})} 
+                    
+            />
             <input 
             className="input"
-            type="email"
-            pattern=".+@globex\.com" 
+            type="email"          
             required
-            placeHolder="Digite seu email"
+            placeholder="Digite seu email"
             onChange={ e => setEmail(e.target.value)}
-            value={email}
+            {...register('email')}
+            
+       
           />
           <textarea
             className="textarea"            
-            placeHolder="Digite seu nome"
+            placeholder="Digite seu nome"
             onChange={ e => setText(e.target.value)}
-            value={text}         
+            {...register('text')} 
           
            />
-          <button className='sendForm' id="sendForm" type="submit" value='Enviar' onClick={sendEmail}> Enviar </button>
+          <button className='sendForm' id="sendForm" type="submit" value='Enviar' onClick={() => sendEmail()}> Enviar </button>
         </form>
       </div>
 
