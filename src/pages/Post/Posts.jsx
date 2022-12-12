@@ -19,7 +19,7 @@ export default function Posts() {
       .then((res)  => setPosts(res.data));
   };
 
-  const setFiltredPosts = posts.filter(post => post.title.includes(search))
+  const filtredPosts = posts.filter(post => post.title.includes(search))
   
   return (
     <>
@@ -39,7 +39,7 @@ export default function Posts() {
 
         { search.length > 0 ? (
           <div className={styles.posts}>
-          {setFiltredPosts.map((post) => {
+          {filtredPosts.map((post) => {
             const handleNavigateToPost = () => {
               navigate(`${post.id}`, {
                 state: { id: post.id, title: post.title, body: post.body },
