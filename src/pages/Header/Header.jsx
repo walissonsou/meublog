@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-
+import Button from '../../components/Button/index'
 export const Header = () => {
   return (
     <div className={styles.headercontainer}>
@@ -14,11 +14,9 @@ export const Header = () => {
             atualmente.{" "}
           </strong>
           <a href="/sobre">
-            <button type="button" className={styles.buttonabout}>
-              {" "}
-              Mais sobre mim
-            </button>
+          <Button name="Mais sobre mim">  </Button>
           </a>
+         
         </aside>
       </div>
     </div>
