@@ -3,7 +3,7 @@ import euwal from "../../assets/euwal.png";
 
 import emailjs from '@emailjs/browser'
 import { useForm } from 'react-hook-form'
-
+import Button from '../../components/Button/index.jsx'
 export default function About() {
  
 
@@ -92,20 +92,15 @@ export default function About() {
             {...register('text', {required: 'O campo do texto é obrigatório'})}
           
            />
-          <button id="sendForm"  type="submit" disabled={!isDirty && !isValid}
-          
-          > Enviar </button>
+          <Button
+            name="Enviar"
+            id="sendForm"
+            type="submit" 
+            disabled={!isDirty && !isValid}          
+          /> 
+
         </form>
-      </div>
-
-
-
-
-      {/* <div className={styles.buttonemail}>
-        <a className={styles.myemail} href="mailto:walissonsouza96@hotmail.com">
-          <button className={styles.buttons}>Contate-me</button>
-        </a>
-      </div> */}
+      </div>      
     </div>
   );
 }

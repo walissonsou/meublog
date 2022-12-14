@@ -3,6 +3,7 @@ import styles from "./Posts.module.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { apiposts } from "../../services/api";
+import Button from '../../components/Button/index'
 export default function Posts() {
   const navigate = useNavigate();
 
@@ -53,10 +54,10 @@ export default function Posts() {
                   <h2>{post.title} </h2>
                   <p>{post.body}</p>
                 </div>
-                <button> <a 
-                  onClick={() => handleNavigateToPost()} >
-                  Ler mais
-                </a>    </button>          
+                <Button name="Ler Mais">
+                  <a onClick={() => handleNavigateToPost()} >                   
+                  </a>   
+                </Button>         
               </div>
             );
           })}
@@ -77,10 +78,10 @@ export default function Posts() {
                   <h2>{post.title} </h2>
                   <p>{post.body}</p>
                 </div>
-                <button> <a 
-                  onClick={() => handleNavigateToPost()} >
-                  Ler mais
-                </a>    </button>          
+                <Button name="Ler Mais">
+                  <a onClick={() => handleNavigateToPost()} >                
+                  </a>    
+                </Button>          
               </div>
             );
           })}
