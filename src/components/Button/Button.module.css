@@ -1,0 +1,19 @@
+.buttonabout{
+  width: 150px;
+  height: 40px;  
+  border-radius: 9999px;
+  margin-top: 2rem;   
+  border: 1px var(--blue-600);
+  background-color: var(--blue-100);
+  transition: color 0.3s, background-color 0.3s; 
+
+  font-size: 16px;  
+  font-weight: 700;  
+  color: var(--blue-600);  
+  
+}
+.buttonabout:hover{
+  background: var(--blue-400);
+  cursor: pointer;
+  color:var(--blue-600)
+}
