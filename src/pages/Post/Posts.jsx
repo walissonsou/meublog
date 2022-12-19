@@ -34,7 +34,7 @@ export default function Posts() {
          type="text"   
          placeholder="Buscar post..."
          onChange={e => setSearch(e.target.value).uppercase()}
-         value={search}         
+         value={search}        
          
          ></input>
 
@@ -42,6 +42,7 @@ export default function Posts() {
           <div className={styles.posts}>
           {filtredPosts.map((post) => {
             const handleNavigateToPost = () => {
+              
               navigate(`${post.id}`, {
                 state: { id: post.id, title: post.title, body: post.body },
               });
@@ -50,7 +51,7 @@ export default function Posts() {
             return (
               <div key={post.id} className={styles.postsu}>
                 <div>
-                  <time> </time>
+                  
                   <h2>{post.title} </h2>
                   <p>{post.body}</p>
                 </div>
@@ -66,6 +67,7 @@ export default function Posts() {
           <div className={styles.posts}>
           {posts.map((post) => {
             const handleNavigateToPost = () => {
+              
               navigate(`${post.id}`, {
                 state: { id: post.id, title: post.title, body: post.body },
               });
@@ -74,14 +76,17 @@ export default function Posts() {
             return (
               <div key={post.id} className={styles.postsu}>
                 <div>
-                  <time> </time>
+                  
                   <h2>{post.title} </h2>
                   <p>{post.body}</p>
                 </div>
-                <Button name="Ler Mais">
-                  <a onClick={() => handleNavigateToPost()} >                
-                  </a>    
-                </Button>          
+              
+
+                <button className={styles.buttonabout}>
+                <a onClick={() => handleNavigateToPost()} >
+                  Ler mais
+                </a>    
+                </button>              
               </div>
             );
           })}
