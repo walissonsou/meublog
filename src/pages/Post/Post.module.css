@@ -42,9 +42,7 @@
 
 .posts :hover strong{
   color: #3586ff;
-
 }
-
 
 img {
   margin-top: 20px;
@@ -55,11 +53,9 @@ img {
 
 }
 button{
- 
   justify-content: center;
   align-items: center;
-  display: flex  
-  
+  display: flex    
 }
 
 input {
@@ -68,6 +64,5 @@ input {
   height: 40px;    
   border-radius: 10px;  
   border: 2px solid var(--blue-600);
-  font-family:'Josefin Sans', sans-serif;
-  
+  font-family:'Josefin Sans', sans-serif;  
 }

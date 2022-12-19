@@ -1,14 +1,13 @@
 .container {
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2rem; 
 
 }
 
 .posts{
  max-width: 720px;
- margin: 5rem auto 0;
- 
+ margin: 5rem auto 0; 
 }
 
 .posts a{
@@ -18,16 +17,8 @@
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid var(--gray-400);
-
   }
 
-.posts time{
-  font-size: 1rem;
-  display: flex;
-  align-items: center;;
-  color: var(--gray-300);
-
-}
 .posts strong {
   display: block;
   font-size: 1.5rem;
@@ -46,10 +37,36 @@
 
 }
 .postsu{
-  border-bottom: 2px solid rgb(182, 180, 180);
+  border-bottom: 2px solid rgb(182, 180, 182);
 }
 
 .postsu h2{
   margin-top: 2rem;
   text-transform: uppercase;
+}
+.buttonabout{
+  width: 150px;
+  height: 40px;  
+  border-radius: 9999px;
+  margin: 1% auto;   
+  border: 1px var(--blue-600);
+  background-color: var(--blue-100);
+  transition: color 0.3s, background-color 0.3s; 
+
+  font-size: 16px;  
+  font-weight: 700;  
+
+  justify-content: center;
+  align-items: center;
+  display: flex    
+
+}
+.buttonabout:hover{
+  background: var(--blue-400);
+  cursor: pointer;
+  
+}
+
+a{
+  color: var(--blue-600)
 }

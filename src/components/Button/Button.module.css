@@ -1,4 +1,5 @@
 .buttonabout{
+  padding: 0;
   width: 150px;
   height: 40px;  
   border-radius: 9999px;
@@ -19,5 +20,5 @@
 .buttonabout:hover{
   background: var(--blue-400);
   cursor: pointer;
-  color:var(--blue-600)
+   
 }
