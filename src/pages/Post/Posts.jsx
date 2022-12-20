@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { apiposts } from "../../services/api";
 import Button from "../../components/Button/index";
+import { SelectOptions } from "../../components/SelectOptions";
+import Pagination from "../../components/Pagination";
 
 export default function Posts() {
   const navigate = useNavigate();
@@ -38,16 +40,8 @@ export default function Posts() {
       <header>
         <title> Posts | My Blog</title>
         
-      <select value={itensPage} onChange={(e) => setItensPage(Number(e.target.value))}>
-        <option value={5} > 5  </option>
-        <option value={10} > 10 </option>
-        <option value={15} > 15 </option>
-        <option value={20} > 20 </option>
-      </select>
-      <div> 
-      {Array.from(Array(pages), (item, index ) => {
-        return  <button value={index} onClick={(e) => setCurrentPage(e.target.value)} > {index + 1} </button> })}  
-      </div>
+      <SelectOptions itensPage={itensPage} setItensPage={setItensPage} />
+      <Pagination pages={pages} setCurrentPage={setCurrentPage} />
       </header>
       <main className={styles.container}>
         <input
@@ -104,6 +98,7 @@ export default function Posts() {
             })}
           </div>
         )}
+        
       </main>
     </>
   );
