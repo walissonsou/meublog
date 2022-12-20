@@ -6,21 +6,20 @@ import { apiposts } from "../../services/api";
 import Button from "../../components/Button/index";
 import { SelectOptions } from "../../components/SelectOptions";
 import Pagination from "../../components/Pagination";
+import Search from "../../components/Search";
 
 export default function Posts() {
   const navigate = useNavigate();
 
-  
   const [search, setSearch] = useState("");
   const [posts, setPosts] = useState([]);
-  const [itensPage, setItensPage] = useState(5)
-  const [currentPage, setCurrentPage] = useState(0)
+  const [itensPage, setItensPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(0);
 
-  const pages = Math.ceil(posts.length / itensPage)
-  const startIndex = (currentPage * itensPage)
-  const endedIndex = (startIndex + itensPage)  
-  const currentItens = posts.slice(startIndex, endedIndex)
-
+  const pages = Math.ceil(posts.length / itensPage);
+  const startIndex = currentPage * itensPage;
+  const endedIndex = startIndex + itensPage;
+  const currentItens = posts.slice(startIndex, endedIndex);
 
   useEffect(() => {
     getPosts().catch((err) => console.log(err));
@@ -32,25 +31,24 @@ export default function Posts() {
 
   const filtredPosts = posts.filter((post) => post.title.includes(search));
 
-
-  
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [itensPage]);
 
   return (
     <>
       <header>
         <title> Posts | My Blog</title>
-        
-      <SelectOptions itensPage={itensPage} setItensPage={setItensPage} />
-      <Pagination pages={pages} setCurrentPage={setCurrentPage} />
       </header>
-      <main className={styles.container}>
-        <input
-          name="search"
-          type="text"
-          placeholder="Buscar post..."
-          onChange={(e) => setSearch(e.target.value).uppercase()}
-          value={search}
-        ></input>
+      <main className={styles.container}>        
+        <Search setSearch={setSearch} search={search} />
+
+        <SelectOptions itensPage={itensPage} setItensPage={setItensPage} />
+        <Pagination
+          pages={pages}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+        />
 
         {search.length > 0 ? (
           <div className={styles.posts}>
@@ -98,7 +96,6 @@ export default function Posts() {
             })}
           </div>
         )}
-        
       </main>
     </>
   );
