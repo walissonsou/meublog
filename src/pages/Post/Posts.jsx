@@ -22,6 +22,10 @@ export default function Posts() {
   const currentItens = posts.slice(startIndex, endedIndex);
 
   useEffect(() => {
+    setCurrentPage(0);
+  }, [itensPage]);
+
+  useEffect(() => {
     getPosts().catch((err) => console.log(err));
   }, []);
 
@@ -31,24 +35,18 @@ export default function Posts() {
 
   const filtredPosts = posts.filter((post) => post.title.includes(search));
 
-  useEffect(() => {
-    setCurrentPage(0);
-  }, [itensPage]);
-
   return (
     <>
       <header>
         <title> Posts | My Blog</title>
       </header>
-      <main className={styles.container}>        
+      <main className={styles.container}>
+      <div className={styles.miniHeader}>
         <Search setSearch={setSearch} search={search} />
-
         <SelectOptions itensPage={itensPage} setItensPage={setItensPage} />
-        <Pagination
-          pages={pages}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-        />
+      </div>
+     
+        <Pagination pages={pages} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
 
         {search.length > 0 ? (
           <div className={styles.posts}>
