@@ -8,8 +8,17 @@ import Button from "../../components/Button/index";
 export default function Posts() {
   const navigate = useNavigate();
 
-  const [posts, setPosts] = useState([]);
+  
   const [search, setSearch] = useState("");
+  const [posts, setPosts] = useState([]);
+  const [itensPage, setItensPage] = useState(5)
+  const [currentPage, setCurrentPage] = useState(0)
+
+  const pages = Math.ceil(posts.length / itensPage)
+  const startIndex = (currentPage * itensPage)
+  const endedIndex = (startIndex + itensPage)  
+  const currentItens = posts.slice(startIndex, endedIndex)
+
 
   useEffect(() => {
     getPosts().catch((err) => console.log(err));
@@ -21,10 +30,24 @@ export default function Posts() {
 
   const filtredPosts = posts.filter((post) => post.title.includes(search));
 
+
+  
+
   return (
     <>
       <header>
         <title> Posts | My Blog</title>
+        
+      <select value={itensPage} onChange={(e) => setItensPage(Number(e.target.value))}>
+        <option value={5} > 5  </option>
+        <option value={10} > 10 </option>
+        <option value={15} > 15 </option>
+        <option value={20} > 20 </option>
+      </select>
+      <div> 
+      {Array.from(Array(pages), (item, index ) => {
+        return  <button value={index} onClick={(e) => setCurrentPage(e.target.value)} > {index + 1} </button> })}  
+      </div>
       </header>
       <main className={styles.container}>
         <input
@@ -59,7 +82,7 @@ export default function Posts() {
           </div>
         ) : (
           <div className={styles.posts}>
-            {posts.map((post) => {
+            {currentItens.map((post) => {
               const handleNavigateToPost = () => {
                 navigate(`${post.id}`, {
                   state: { id: post.id, title: post.title, body: post.body },

@@ -9,5 +9,5 @@ export const apibook = axios.create({
 });
 
 export const apiposts = axios.create({
-  baseURL: "https://jsonplaceholder.typicode.com/posts?_limit=5&_page=1"
+  baseURL: "https://jsonplaceholder.typicode.com/todos"
 })
